@@ -15,3 +15,6 @@ tabLinks.forEach(link => {
         document.getElementById(tabId).classList.add('active');
     });
 });
+//lặp ra các radio button để gán giá trị active cho label tương ứng loại bỏ active của các label không chọn
+
+

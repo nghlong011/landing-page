@@ -1,8 +1,11 @@
 body {
     background-color: #091125;
     color: #fff;
+    position: relative;
 }
-
+p{
+    margin: 0;
+}
 a {
     text-decoration: none;
     color: #fff;
@@ -257,7 +260,6 @@ a {
     /* Màu nền */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .tab-panel {
@@ -291,14 +293,27 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
     opacity: 1;
+    color: white;
+    background-color: white;
+    border-color: white;
 }
-
-.slider-review label{
+input[type="radio"]:checked::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: white; /* Màu trắng cho dấu tròn bên trong */
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider-review label {
     position: absolute;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
-    display: flex;
     border-radius: 10px;
     top: 0;
     left: 0;
@@ -313,11 +328,13 @@ input[type="radio"]:checked {
 #review-3:checked~#review-3-label {
     transform: translate3d(0%, 0, 0px);
 }
+
 #review-1:checked~#review-2-label,
 #review-2:checked~#review-3-label,
 #review-3:checked~#review-1-label {
     transform: translate3d(40%, 0, -100px);
 }
+
 #review-1:checked~#review-3-label,
 #review-2:checked~#review-1-label,
 #review-3:checked~#review-2-label {
@@ -327,32 +344,168 @@ input[type="radio"]:checked {
 .review-content {
     padding: 20px;
 }
+
 .user-info {
     display: flex;
     justify-content: space-between;
 }
-.user-info img {
+
+.review-content img {
     width: 74px;
     height: 74px;
     border-radius: 50%;
 }
 
-.user-name p{
+.user-name p {
     font-size: 22px;
     color: #28b1ff;
 }
-.user-info-detail img{
+
+.user-info-detail img {
     width: 20px;
     height: 20px;
 }
-.user-info-detail-item{
+
+.user-info-detail-item {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .user-info-detail {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     font-size: 16px;
+}
+
+.review-content-right p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+}
+.fourth-section{
+    padding-top: 100px;
+    position: relative;
+    height: 700px;
+}
+.fourth-section-left{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 50%;
+}
+.fourth-section-right{
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: -1;
+}
+.fourth-section-content-item img{
+    width: 900px;
+    height: 700px;
+}
+.fourth-section-content-item img:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fourth-section-content-item img:nth-child(3){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fourth-section-content-item img:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fourth-section-content-item img:nth-child(5){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fourth-section-content-item img:nth-child(6){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fourth-section-content-item img:nth-child(7){
+    position: absolute;
+    top: 0;
+    left: 0;
+}   
+.fifth-section{
+    position: relative;
+    height: 800px;
+}
+.fifth-section-right{
+    width: 40%;
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.fifth-section-left{
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fifth-section-content-item img{
+    width: 900px;
+    height: 700px;
+}
+.fifth-section-content-item img:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fifth-section-content-item img:nth-child(3){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fifth-section-content-item img:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fifth-section-content-item img:nth-child(5){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fifth-section-content-item img:nth-child(6){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fifth-section-content-item img:nth-child(7){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: #060606;
+    padding: 40px 0 80px 0;
+}
+.footer p {
+    color: hsla(0,0%,100%,.65);
+}
+.footer a{
+    color: hsla(0,0%,100%,.65);
+}
+.footer-right-item{
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    margin: 0 10px;
 }
