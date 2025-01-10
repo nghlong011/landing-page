@@ -127,11 +127,9 @@ a {
 .part-con {
   color: #fff;
   padding-left: 100px;
-}
-
-.part-tit {
-  font-size: 48px;
-  font-weight: 700;
+  width: 40%;
+  padding-top: 150px;
+  line-height: 1.5;
 }
 
 .part-desc {
